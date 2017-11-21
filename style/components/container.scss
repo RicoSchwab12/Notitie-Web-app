@@ -1,0 +1,12 @@
+.container {
+    margin: 0 auto;
+    background-color: $container-bg;
+    padding: 1em;
+    border-radius: 2.5px;
+    width: 60%;
+    text-align: left;
+    &--title{
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+}

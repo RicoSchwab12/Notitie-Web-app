@@ -1,4 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 body {
-  font-family: sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("../res/img/bg.jpg");
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% auto; }
+
+.page {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15em; }
+
+.container {
+  margin: 0 auto;
+  background-color: #EEEEEC;
+  padding: 1em;
+  border-radius: 2.5px;
+  width: 60%;
+  text-align: left; }
+  .container--title {
+    font-weight: 700;
+    font-size: 1.2em; }
 
 /*# sourceMappingURL=style.css.map */

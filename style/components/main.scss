@@ -1,3 +1,14 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("../res/img/bg.jpg");
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+}
+
+.page{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15em;
 }
