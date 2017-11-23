@@ -2,7 +2,6 @@
 //Created by Rico
 
 console.log("[R]-Notes Core v1.0");
-renderNotes();
 function getNoteData(infotype, noteID){
     switch (infotype){
         case "title":
@@ -15,10 +14,13 @@ function getNoteData(infotype, noteID){
             const description = localStorage.getItem(descriptionID);            
             return atob(description);
             break;
+        case "noteCount":
+            const count = localStorage.getItem("noteCount");
+            return count; 
+            break;
         default:
             return "Request Failed";
-    }
-    let 
+    } 
 }
 
 function createTestNote(){
@@ -35,6 +37,7 @@ function showNote(id){
     let pageContent = "<div class='is-not-selectable' onclick='showHomepage()'>Terug</div><div class='container--title'>" + getNoteData("title", id) + "</div>" + getNoteData("description", id);
     const containerDiv = document.getElementById("container");
     containerDiv.innerHTML = pageContent;
+    console.log("Notitie Tonen - " + getNoteData(id, "title"));
 }
 
 function showHomepage(){
@@ -47,4 +50,7 @@ function renderNotes(){
     for (var i = 1; i < noteCount; i++) {
         notesDiv.innerHTML = notesDiv.innerHTML + "<div class='container__item is-not-selectable cursor-is-pointer' onclick='showNote("+i+")' unselectable='on'><span class='container__item--title'>" + getNoteData("title", i) + "</span><br><span class='container__item--desc'>Dit is een voorbeeld notitie.</span></div>";
     }
+    console.log(noteCount + " notities ingeladen.");    
 }
+
+renderNotes();

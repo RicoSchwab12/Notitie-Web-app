@@ -11,10 +11,18 @@
     <div class="page">
         <div class="container" id="container">
             <div class="container--title">Mijn Notities</div><br>
-            Dit overzicht toont uw huidige notities
+            Dit overzicht toont uw huidige notities<br>
+            Nieuwe Notitie maken
             <div class="container__subcontainer" id="notes">
+                        <div class='editor'>
+                            <div class='container--title'>Notitie Maken</div><br>
+                            <input class='editor__textfield editor__textfield--title' type='text' placeholder='Titel'><br>
+                            <textarea class='editor__textfield editor__textfield--description' cols='110' rows='8' placeholder='Uw notitie'></textarea>
+                            <div class='editor__button editor__button--save'>Opslaan</div>
+                        </div>
             </div>
         </div>
+        
     </div>
     <script src="js/main.js"></script>
 </body>

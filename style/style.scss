@@ -1,6 +1,7 @@
 $container-bg: #EEEEEC;
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-@import "components/extra";
 @import "components/main";
 @import "components/container";
+@import "components/editor";
+@import "components/extra";
