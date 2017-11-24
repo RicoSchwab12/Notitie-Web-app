@@ -10,16 +10,16 @@ body {
 .page {
   margin: 0 auto;
   text-align: center;
-  margin-top: 10em; }
+  margin-top: 5em; }
 
 .container {
   margin: 0 auto;
   background-color: #EEEEEC;
   padding: 1.7em;
   border-radius: 2.5px;
-  width: 60%;
+  width: 80%;
   text-align: left;
-  height: 25em;
+  height: 45em;
   overflow: hidden; }
   .container--title {
     font-weight: 700;
@@ -37,7 +37,8 @@ body {
       color: gray; }
 
 .editor {
-  content: 'Editor fout'; }
+  content: 'Editor fout';
+  margin-top: 3em; }
   .editor__textfield {
     border-radius: 4px;
     border: none;
@@ -45,28 +46,10 @@ body {
     margin: 0 1em 1em 0; }
     .editor__textfield--title {
       font-weight: bold;
-      font-size: .8rem; }
+      font-size: .8rem;
+      width: 20em; }
     .editor__textfield--description {
       font-weight: normal !important; }
-  .editor__button {
-    border-radius: 2.5px;
-    width: 5em;
-    text-align: center;
-    padding: .5em 1em .5em 1em;
-    cursor: pointer !important;
-    -webkit-user-select: none;
-    /* Safari */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* IE10+/Edge */
-    user-select: none;
-    /* Standard */ }
-    .editor__button--save {
-      color: white;
-      background-color: #00B16A; }
-      .editor__button--save:hover {
-        background-color: #2ECC71; }
 
 .is-not-selectable {
   -webkit-user-select: none;
@@ -80,5 +63,30 @@ body {
 
 .cursor-is-pointer {
   cursor: pointer; }
+
+.button {
+  border-radius: 2.5px;
+  width: 5em;
+  text-align: center;
+  padding: .5em 1em .5em 1em;
+  cursor: pointer !important;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */ }
+  .button--green {
+    color: white;
+    background-color: #00B16A; }
+    .button--green:hover {
+      background-color: #2ECC71; }
+  .button--blue {
+    color: white;
+    background-color: #1897D8; }
+    .button--blue:hover {
+      background-color: #2B9EEB; }
 
 /*# sourceMappingURL=style.css.map */

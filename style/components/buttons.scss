@@ -1,0 +1,25 @@
+.button{
+    border-radius: 2.5px;
+    width: 5em;
+    text-align: center;
+    padding: .5em 1em .5em 1em;
+    cursor: pointer !important;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    &--green {
+        color: white;
+        background-color: #00B16A;            
+        &:hover{
+            background-color: #2ECC71;
+        }
+    }
+    &--blue{
+        color: white;
+        background-color: #1897D8;
+        &:hover{
+            background-color: #2B9EEB;
+        }
+    }
+}

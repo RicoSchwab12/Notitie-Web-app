@@ -2,6 +2,11 @@
 //Created by Rico
 
 console.log("[R]-Notes Core v1.0");
+function initializeSystem(){
+    localStorage.setItem("noteCount" , 0);
+    localStorage.setItem("initOK", true);
+}
+
 function getNoteData(infotype, noteID){
     switch (infotype){
         case "title":
@@ -51,6 +56,32 @@ function renderNotes(){
         notesDiv.innerHTML = notesDiv.innerHTML + "<div class='container__item is-not-selectable cursor-is-pointer' onclick='showNote("+i+")' unselectable='on'><span class='container__item--title'>" + getNoteData("title", i) + "</span><br><span class='container__item--desc'>Dit is een voorbeeld notitie.</span></div>";
     }
     console.log(noteCount + " notities ingeladen.");    
+}
+
+function startNewNote(){
+    let pageContent = "<div class='editor'><div class='container--title'>Notitie Maken</div><br><input id='title' class='editor__textfield editor__textfield--title' type='text' placeholder='Titel'><br><textarea id='description' class='editor__textfield editor__textfield--description' cols='110' rows='8' placeholder='Uw notitie'></textarea><div onclick='saveNewNote()' class='button button--green'>Opslaan</div></div>"
+    const containerDiv = document.getElementById('container');
+    containerDiv.innerHTML = pageContent;
+}
+
+function saveNewNote(){
+    localStorage.setItem("noteCount" , parseInt(localStorage.getItem('noteCount')) + 1);
+    const noteCount = parseInt(localStorage.getItem('noteCount'));    
+    const editorTitle = document.getElementById("title");
+    const editorDesc = document.getElementById("description");
+
+    localStorage.setItem("noteTitle-ID-"+noteCount, btoa(editorTitle.value));
+    localStorage.setItem("noteDescription-ID-"+noteCount, btoa(editorDesc.value));
+    console.log("Notitie opgeslagen");
+    showHomepage();
+    
+}
+
+const initOK = localStorage.getItem("initOK");
+if (!initOK){
+    initializeSystem();
+} else {
+    console.log("INIT already Ok :D");
 }
 
 renderNotes();
